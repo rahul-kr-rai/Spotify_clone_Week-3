@@ -24,7 +24,7 @@ const initialSongLibrary = [
     id: 3,
     name: 'Kalank',
     artist: 'Arijit Singh',
-    preview_url: 'https://st1.ezmp3.cc/download?sig=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlUGF0aCI6Ii4vZmlsZXMvMjAyNC83LzE0LzE3LzM4LzBkNzM4NzI2ODE0Y2VhMGNjYTA0NjZiOC5tcDMiLCJ0aXRsZSI6IkthbGFuayBUaXRsZSBUcmFjayAtIEx5cmljYWwgfCBBbGlhIEJoYXR0ICwgVmFydW4gRGhhd2FuIHwgQXJpaml0IFNpbmdoIHwgUHJpdGFtfCBBbWl0YWJoIFsgZXptcDMuY2MgXS5tcDMiLCJpYXQiOjE3MzUzMjUwMDIsImV4cCI6MTczNTQxMTQwMn0.nZIhRtDgbU5RTNh6piCzzbOyMFpocbuC1aOp65w_DjU?download',
+    preview_url: 'https://st1.ezmp3.cc/download?sig=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlUGF0aCI6Ii4vZmlsZXMvMjAyNC83LzE0LzE3LzM4LzBkNzM4NzI2ODE0Y2VhMGNjYTA0NjZiOC5tcDMiLCJ0aXRsZSI6IkthbGFuayBUaXRsZSBUcmFjayAtIEx5cmljYWwgfCBBbGlhIEJoYXR0ICwgVmFydW4gRGhhd2FuIHwgQXJpaml0IFNpbmdoIHwgUHJpdGFtfCBBbWl0YWJoIFsgZXptcDMuY2MgXS5tcDMiLCJpYXQiOjE3MzUzMjUwMDIsImV4cCI6MTczNTQxMTQwMn0.nZIhRtDgbU5RTNh6piCzzbOyMFpocbuC1aOp65w_DjU?',
     image_url: 'https://mainbalti.s3.ap-south-1.amazonaws.com/image_movies/4750/shiddat-poster-16.jpg' // Provided Image URL
   },
   {
@@ -168,28 +168,28 @@ function Home() {
                 <button className="btn btn-light mb-2" onClick={() => setShowAddSongForm(false)}>
                   <FaArrowLeft /> Back
                 </button>
-                <form onSubmit={handleAddSongFormSubmit}>
-                  <div className="form-group">
+                <form id="add-song-form" onSubmit={handleAddSongFormSubmit}>
+                  <div className="form-group-song">
                     <label>Song Name</label>
                     <input type="text" className="form-control" value={newSong.name} onChange={(e) => setNewSong({ ...newSong, name: e.target.value })} required />
                   </div>
-                  <div className="form-group">
+                  <div className="form-group-song">
                     <label>Album Name</label>
                     <input type="text" className="form-control" value={newSong.album} onChange={(e) => setNewSong({ ...newSong, album: e.target.value })} />
                   </div>
-                  <div className="form-group">
+                  <div className="form-group-song">
                     <label>Artist</label>
                     <input type="text" className="form-control" value={newSong.artist} onChange={(e) => setNewSong({ ...newSong, artist: e.target.value })} required />
                   </div>
-                  <div className="form-group">
+                  <div className="form-group-song">
                     <label>Album Image URL</label>
                     <input type="text" className="form-control" value={newSong.image_url} onChange={(e) => setNewSong({ ...newSong, image_url: e.target.value })} required />
                   </div>
-                  <div className="form-group">
+                  <div className="form-group-song">
                     <label>Song Preview URL</label>
                     <input type="text" className="form-control" value={newSong.preview_url} onChange={(e) => setNewSong({ ...newSong, preview_url: e.target.value })} required />
                   </div>
-                  <button type="submit" className="btn btn-primary mt-2">Add Song</button>
+                  <button type="submit" className="btn btn-primary mt-2 " id="btn-add-song">Add Song</button>
                 </form>
               </div>
             ) : showLikedSongs ? (
