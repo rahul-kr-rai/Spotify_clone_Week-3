@@ -1,0 +1,137 @@
+/* General styles */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Spotify', sans-serif;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.sidebar h4 {
+  color: #ffffff;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+.sidebar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #1db954;
+  padding: 5px 20px;
+  line-height: 3;
+  border-radius: 8px;
+  display: block;
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.sidebar ul li a:hover {
+  font-weight: bold;
+  background-color: #121212; /* Change background on hover */
+}
+
+/* Card styles */
+.card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: none;
+  width: auto; /* Allow cards to adjust width automatically */
+}
+
+.card .card-title {
+  color: #000000; /* Changed to white for better visibility */
+  font-weight: bold;
+}
+
+.card .card-text {
+  color: #717171; /* Changed to light gray for better readability */
+}
+
+.card img {
+  border-radius: 8px;
+  width: 221.5px; /* Make image responsive */
+  height: 221.5px;
+}
+
+.music-controls {
+  display: flex;
+  justify-content: space-between; /* Space out controls evenly */
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #d000b8; /* Play button color */
+  border: none;
+}
+
+.btn-outline-success,
+.btn-outline-info {
+  border-color: #1db954; /* Outline button color */
+}
+
+.btn-danger {
+  background-color: #ff4c4c; /* Red color for liked songs */
+}
+
+/* Music controller styles */
+.music-controller {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #1e1e1e; /* Controller background */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.controller-buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+}
+
+.controller-buttons .btn {
+  margin: 0 10px; /* Space between buttons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+   .sidebar {
+    margin-bottom: 20px;
+    width: auto; /* Responsive width */
+    padding: 10px; /* Reduced padding on small screens */
+    height: auto; /* Adjust height automatically */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    max-height: calc(100vh - 100px); /* Limit height to prevent overflow on smaller screens */
+    position: sticky; /* Keep sidebar fixed during scroll */
+    top: 20px; /* Add some spacing from the top */
+    z-index:1000; /* Ensure it stays above other content */
+   }
+
+   .container {
+     padding-left :10px ;
+     padding-right :10px ;
+   }
+
+   .btn {
+     width: calc(100% -10px); /* Make buttons full width minus margin */
+     margin-bottom :5px ; /* Space between buttons */
+   }
+}
+
+@media (max-width:576px) {
+   .music-controller h4{
+      font-size :14px ; 
+   }
+}
