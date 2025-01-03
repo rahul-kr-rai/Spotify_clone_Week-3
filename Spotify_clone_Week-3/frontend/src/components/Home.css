@@ -105,11 +105,38 @@ body {
   margin: 0 10px; /* Space between buttons */
 }
 
+.form-group-song input{
+  padding: 10px 20px 10px 20px;
+  margin: 10px 0 10px 0;
+  width: 50%;
+  margin-left: 10%;
+}
+.btn-add-song {
+
+  justify-content: center; /* Center text inside the button */
+  align-items: center; /* Center the button itself within its parent container */
+  margin-left: auto; /* Align to the center horizontally */
+  margin-right: auto; /* Align to the center horizontally */
+  text-align: center;
+}
+
+.form-group-song label{
+  margin-left: 10%;
+  color: #ffffff;
+}
+.add-song-form{
+  margin-top: 20px;
+  width: 80%;
+  justify-content: center;
+  padding: 15px 20px 15px 20px;
+  background-color: #0000006d; /* Controller background */
+  border-radius: 8px; /* Rounded corners */
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
    .sidebar {
     margin-bottom: 20px;
-    width: auto; /* Responsive width */
+    width: 60%; /* Responsive width */
     padding: 10px; /* Reduced padding on small screens */
     height: auto; /* Adjust height automatically */
     overflow-y: auto; /* Allow scrolling if content overflows */
